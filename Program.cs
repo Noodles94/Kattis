@@ -20,14 +20,18 @@ namespace improver
         {
             while (true)
             {
+                 //var numbers = Console.ReadLine().Split(' ').Select(x => Int32.Parse(x));
+                //foreach (var num in numbers)
+                //{
+                  //  Console.WriteLine(num);
+                //}
                 int play1Dice1, play1Dice2, play2Dice1, play2Dice2, score1, score2;
                 String input;
                 input = Console.ReadLine();
-                int[] numbers = new int[input.Length];
-                for(int i = 0; i < input.Length; ++i)
+                int[] numbers = new int[(input.Length/2) + 1];
+                for(int i = 0; i < numbers.Length; ++i)
                 {
-                    numbers[i] = input[i] - '0';
-                    //Console.WriteLine(numbers[i]);
+                    numbers[i] = input[i*2] - '0';
                 }
 
                 play1Dice1 = numbers[0];
